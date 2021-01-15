@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "ipad-layout-poi_creation",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

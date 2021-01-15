@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- head section which contains meta data -->
+<head>
+    <meta charset="utf-8">
+    <title>Canoodle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- the three things that jQuery Mobile needs to work -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="../CSS/button_styles.css" />
+    <link rel="stylesheet" href="../CSS/background_styles.css" />
+    <link rel="stylesheet" href="../CSS/progressbar.css">
+    <link rel="stylesheet" href="../themes/blue_test.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>   
+</head>
+<script>
+    $(document).on('click', '#owner-signup-btn', function (e) {
+     window.location.href = 'https://pet-temp-host.web.app/Common_elements/signup.html';
+    });
+
+    $(document).on('click', '#caretaker-signup-btn', function (e) {
+     window.location.href = 'https://pet-temp-host.web.app/Common_elements/caretaker_signup.html';
+    });
+</script>
+<body>
+     <!-- start of the header section -->
+     <div data-role="header" data-theme="a" data-fullscreen="true" style="height: 42px;">
+        <a data-rel="back" id="back-btn" class="ui-btn ui-btn-icon-left" style="background-color: transparent;
+        border: none;
+        position: relative;
+        z-index: 1;
+        top: 2px;
+        left: -1px;"> <img src="../images/icons8-back-26.png" alt="" style="width: 16px;"></a>
+        <h1 id="headerText" style="
+        font-family: 'Rajdhani', sans-serif;margin-top: -35px;margin-left: 41px;
+      text-align: left;white-space: break-spaces;">R E G I S T R A T I O N</h1>
+       <img src="../images/small-logo.png" alt="" style="position: relative;
+       top: -92%;
+       left: 83%"> 
+    </div>
+<!-- End of header -->
+
+<div style="width: 100%;
+padding-left: 23px;padding-bottom: 5%;">
+    <div style="width: 50%;margin-top: 0%;">
+        <img src="" alt="">
+        <div style="width: 100%;
+        border: 1px solid #C9F1FC;
+        height: 280px;
+        background-color: #C9F1FC;
+        font-size: 12px;
+        text-align: center;
+        border-radius: 20px;
+        position: relative;
+        ">
+            <p style="font-weight: bold;">CARETAKER</p>
+            <button id="caretaker-signup-btn" style="width: 150px;
+            font-size: 12px;
+            margin: auto;">CARETAKER SIGNUP</button>
+            <P>The Job of the caretaker is to take care of the dog/cat owner gives you</P>
+            <img src="../images/pet-caretaker.png" alt="" style="width: 100px;">
+        </div>
+
+    </div>
+   
+
+    <div style="width:50%">
+        <img src="" alt="">
+        <div style="width: 100%;
+        border: 1px solid #C9F1FC;
+        height: 280px;
+        background-color: #C9F1FC;
+        font-size: 12px;
+        text-align: center;
+        border-radius: 20px;
+        position: relative;
+        left: 89%;">
+            <p style="font-weight: bold;">OWNER</p>
+            <BUtton id="owner-signup-btn" style="width: 150px;
+            font-size: 12px;
+            margin: auto;
+            background-color: #FF8139;">OWNER SIGNUP</BUtton>
+            <P>The Job of the owner is to deliver your dog/cat to the caretaker safely</P>
+            <img src="../images/dog-training.png" alt="" style="width: 100px;">
+        </div>
+
+    </div>
+</div>
+    
+</body>
+</html>
