@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "ipad-layout-poi_creation",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
