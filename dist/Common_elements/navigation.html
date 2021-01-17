@@ -25,7 +25,7 @@
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: rgb(88, 202, 255); /* Black */
+  background-color: #5BD4F6; /* Black */
   border: .5px solid grey;
   /* overflow-x: hidden; Disable horizontal scroll */
   /* padding-top: 20px; */
@@ -131,6 +131,13 @@
     .logoclass {
       height: 10%;
     }
+    .header-class {
+    width: 85%;
+    height: 4em;
+    position: fixed;
+    margin-left: 154px;
+    z-index: 10;
+  }
 
     .user-div-img {
       max-width: none !important;
@@ -178,11 +185,7 @@
     margin-left: -13px;
   }
 
-  .header-class {
-    width: 85%;
-    height: 4em;
-    position: fixed;
-  }
+ 
 
 /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
 /* @media screen and (max-width: 11366px) { */
@@ -265,6 +268,13 @@
   .navbar-name-tag {
     margin: 0em;
   }
+  .header-class {
+    width: 75%;
+    height: 4em;
+    position: fixed;
+    margin-left: 342px;
+    z-index: 10;
+  }
 }
 
 </style>
@@ -315,15 +325,20 @@
 <body>
   <!-- start of the header section -->
   <div class="header-class" data-role="header" data-theme="a" data-fullscreen="true" style="float: right;">
-      <a data-rel="back" id="back-btn" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="background-color: transparent;
+      <a data-rel="back" id="back-btn" class="ui-btn ui-btn-icon-left" style="background-color: transparent;
       border: none;
       position: relative;
       z-index: 1;
-      top: -8px;
-      left: -24px;"> <img src="../images/icons8-back-26.png" alt="" style="width: 16px;"></a>
+      top: 7px;
+      left: 5px;"> <img src="../images/icons8-back-26.png" alt="" style="width: 28px;"></a>
       <h1 id="headerText" style="position: relative;
-      top: -51px;font-family: 'Rajdhani', sans-serif;margin: 0px;left: 40px;
-    text-align: left;white-space: break-spaces;">T I T L E</h1>
+      top: -49px;
+      font-family: 'Rajdhani', sans-serif;
+      margin: 0px;
+      left: 63px;
+      text-align: left;
+      white-space: break-spaces;
+      font-size: 25px;">T I T L E</h1>
      <!-- <img src="../images/small-logo.png" alt="" style="position: relative;
      top: -86px;
      left: 307px;">  -->
