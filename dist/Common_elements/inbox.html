@@ -51,7 +51,7 @@
       divs.id = id;
       divs.className = "sort-style";
       $('#inbox').append(divs);
-      $('#' + id).load('https://my-pet-temp-ipad.web/Common_elements/poi-chat.html', function() {
+      $('#' + id).load('https://my-pet-temp-ipad.web.app/Common_elements/poi-chat.html', function() {
         $('#' + id).enhanceWithin();
       });
     }
@@ -61,12 +61,18 @@
 
 
   <!--Search text box for map-->
-  <div  class="background-container" style="width: -webkit-fill-available;">
-    <div style="margin: 15px;">
+  <div  class="background-container" >
+    <div style="margin: 18px;
+    margin-left: -76%;
+    width: 185%;
+    margin-top: -20%;">
       <input id="pac-input" class="controls" type="text" placeholder="Search Box" style="height: 40px;"/>
     </div>
-    <hr/>
-    <div id="inbox" style="font-family: 'Roboto', sans-serif;">
+    <hr style="margin-left: -69%;"/>
+    <div id="inbox" style="font-family: 'Roboto', sans-serif;
+    transform: scale(1.2);
+    margin-top: 16%;
+    margin-left: -37%;">
     </div>
   </div>
   
@@ -113,7 +119,7 @@
         ];
         function createCallback( i ){
           return function(){
-            $('#content').load('https://my-pet-temp-ipad.web/Common_elements/chat.html');
+            $('#content').load('https://my-pet-temp-ipad.web.app/Common_elements/chat.html');
             //var header_text = e.target.name;
             //$('#headerText').html(header_text);
           }

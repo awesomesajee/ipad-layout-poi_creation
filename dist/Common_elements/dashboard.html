@@ -350,14 +350,14 @@ for (let i = 0; i < features.length; i++) {
         function createCallback( i ){
           return function(){
             localStorage.setItem("userData", JSON.stringify(data[i]));
-            window.location.href = 'https://my-pet-temp-ipad.web/Common_elements/ordering.html';
+            window.location.href = 'https://my-pet-temp-ipad.web.app/Common_elements/ordering.html';
           }
         }
 
         function viewPagetransfer( i ){
           return function(){
             localStorage.setItem("userData", JSON.stringify(data[i]));
-            window.location.href = 'https://my-pet-temp-ipad.web/Common_elements/view.html';
+            window.location.href = 'https://my-pet-temp-ipad.web.app/Common_elements/view.html';
           }
         }
 

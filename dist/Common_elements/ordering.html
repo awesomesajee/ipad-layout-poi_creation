@@ -18,6 +18,268 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://checkout.stripe.com/checkout.js"></script>
+    <style>
+
+      .sidenav {
+        height: 100%; /* Full-height: remove this if you want "auto" height */
+        width: 15%; /* Set the width of the sidebar */
+        position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        left: 0;
+        background-color: #5BD4F6; /* Black */
+        border: .5px solid grey;
+        /* overflow-x: hidden; Disable horizontal scroll */
+        /* padding-top: 20px; */
+      }
+      
+      /* The navigation menu links */
+      
+      /* When you mouse over the navigation links, change their color */
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+      
+      /* Style page content */
+      .main {
+        margin-left: 160px; /* Same as the width of the sidebar */
+        padding: 0px 10px;
+      }
+      
+      /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+      /* @media screen and (max-height: 1366) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      } */
+      
+      .nav_fonts {
+          font-size: 12pt;
+          /* font-family: Georgia, Times, 'Times New Roman', serif; */
+      }
+      
+      /* .navbar-ul {
+        padding-inline-start: 0px;
+        background-color: white;
+        height: 52px;
+        margin: auto;
+        box-shadow: 1px 1px 1px grey !important;
+      } */
+      
+      /* 
+      .navbar-li {
+        display: inline-block;
+        padding: 15px;
+        vertical-align: top;
+        color: #58caff;
+      } */
+      
+      .navbar-li-icon {
+        display: inline-block;
+        padding: 0 !important;
+        vertical-align: top;
+        color: #58caff;
+        height: -webkit-fill-available;
+        width:  -webkit-fill-available;
+      }
+      
+      .div-icon {
+        padding: 25px; 
+        margin: auto;
+        box-shadow: 1px 1px 1px grey;
+      }
+      
+      .navbar-a {
+        /* padding: 1px !important; */
+      }
+      
+      .container {
+        /* border: 2px solid #dedede; */
+        background-color: #5bd4f64d;
+        border-radius: 5px;
+        padding: 2em;
+        /* margin: 10px 0; */
+      }
+      
+      
+      /* Style images */
+      .container img {
+        float: left;
+        max-width: 3em;
+        width: 100%;
+        margin-right: 20px;
+        border-radius: 50%;
+      }
+      
+      
+      /* --------------------------------------------------------------------------------------- */
+      .navbar-ul {
+          padding-inline-start: 0px;
+          background-color: white;
+          height: 100%;
+          margin: auto;
+          /* box-shadow: 1px 1px 1px grey !important;     */
+        }
+      
+        .navbar-div {
+          height: 11.66%;
+          border: .5px solid lightgrey;
+        }
+      
+        .navbar-a {
+          /* padding: 1px !important; */
+          height: 100%;
+        }
+        @media (orientation: portrait){
+          .logoclass {
+            height: 10%;
+          }
+          .header-class {
+          width: 85%;
+          height: 4em;
+          position: fixed;
+          margin-left: 154px;
+          z-index: 10;
+        }
+      
+          .user-div-img {
+            max-width: none !important;
+            margin-right: 0 !important;
+          }
+          
+          .user-div-text {
+            height: 10%;
+            width: 100%;
+            float: right;
+          }
+          .user-div {
+            height: 20%;
+          }
+      
+          .navbar-name-tag {
+            margin: 1em;
+          }
+         
+        }
+        .navbar-li {
+          display: inline-block;
+          padding: 4.5%;
+          vertical-align: top;
+          color: #58caff;
+          /* box-shadow: 1px 1px 1px grey !important; */
+        }
+      
+        .div-icon {
+          padding: 35px;
+          height: -webkit-fill-available;
+        }
+      
+        .ui-btn-icon-top:after {
+          /* top: 1.5625em;
+          height: 35px;
+          width: 35px; */
+          top: 3.5625em;
+          height: 40px;
+          width: 40px;
+        }
+      
+        .ui-btn-icon-notext:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after {
+          left: 50%;
+          margin-left: -13px;
+        }
+      
+       
+      
+      /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+      /* @media screen and (max-width: 11366px) { */
+      @media (orientation: landscape){
+      
+        .sidenav {
+          width: 25%; 
+        }
+      
+        .header-class {
+          width: 75%;
+        }
+      
+        .navbar-ul {
+          padding-inline-start: 0px;
+          background-color: white;
+          height: 100%;
+          margin: auto;
+          box-shadow: 1px 1px 1px grey !important;    
+        }
+      
+        .navbar-a {
+          /* padding: 1px !important; */
+          height: 100%;
+        }
+      
+        .logoclass {
+          height: 20%;
+        }
+        
+        .navbar-li {
+          display: inline-block;
+          padding: 4.5%;
+          vertical-align: top;
+          color: #58caff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 65%;
+          float: right;
+          height: -webkit-fill-available;
+          /* box-shadow: 1px 1px 1px grey !important; */
+        }
+        .navbar-li-icon {
+          display: inline-block;
+          /* padding: 0 !important; */
+          vertical-align: top;
+          color: #58caff;
+          height: -webkit-fill-available;
+          width: 35%;
+          float: left;
+        }
+      
+        .div-icon {
+          padding: 35px;
+          height: -webkit-fill-available;
+          box-shadow: 0px -1px 2px grey;
+        }
+      
+        .ui-btn-icon-top:after {
+          top: 2.5625em;
+          height: 35px;
+          width: 35px;
+        }
+      
+        .ui-btn-icon-notext:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after {
+          left: 50%;
+          margin-left: -13px;
+        }
+      
+        .user-div {
+          height: 10%;
+        }
+      
+        .user-div-text {
+          width: 65%;
+          float: right;
+        }
+      
+        .navbar-name-tag {
+          margin: 0em;
+        }
+        .header-class {
+          width: 75%;
+          height: 4em;
+          position: fixed;
+          margin-left: 342px;
+          z-index: 10;
+        }
+      }
+      
+      </style>
 <style>
   .txt-new-style{
     border-radius: 3px !important;
@@ -31,7 +293,7 @@
     <script>
 
         $(document).ready(function () {
-            $('#userContent').load('https://my-pet-temp-ipad.web/Common_elements/poi.html', function () {
+            $('#userContent').load('https://my-pet-temp-ipad.web.app/Common_elements/poi.html', function () {
                 $('#userContent').enhanceWithin();
 
             });
@@ -51,7 +313,7 @@
         $('#content').load(page+".html");
         var navLinks = $('.navigation').toArray();
         for(i=0; i<navLinks.length; i++) {
-          if("https://my-pet-temp-ipad.web/Common_elements/"+page+".html" == navLinks[i].href){
+          if("https://my-pet-temp-ipad.web.app/Common_elements/"+page+".html" == navLinks[i].href){
             $('#headerText').html(navLinks[i].name);
           }
         }
@@ -146,7 +408,7 @@
       $('#redeem-txt').parent().addClass('txt-new-style');
 
         $(document).ready(function () {
-            $('#userContent').load('https://my-pet-temp-ipad.web/Common_elements/poi.html', function () {
+            $('#userContent').load('https://my-pet-temp-ipad.web.app/Common_elements/poi.html', function () {
                 $('#userContent').enhanceWithin();
             });
             $('a').click(function (e) {
@@ -258,19 +520,21 @@
 
 <body>
   <!-- start of the header section -->
-  <div data-role="header" data-theme="a" data-fullscreen="true" style="height: 42px;">
+  <div class="header-class" data-role="header" data-theme="a" data-fullscreen="true" style="float: right;">
     <a data-rel="back" id="back-btn" class="ui-btn ui-btn-icon-left" style="background-color: transparent;
     border: none;
     position: relative;
     z-index: 1;
-    top: 2px;
-    left: -1px;"> <img src="../images/icons8-back-26.png" alt="" style="width: 16px;"></a>
-    <h1 id="headerText" style="
-    font-family: 'Rajdhani', sans-serif;margin-top: -35px;margin-left: 41px;
-  text-align: left;white-space: break-spaces;font-weight: bold;">B O O K  C A R E T A K E R</h1>
-   <img src="../images/small-logo.png" alt="" style="position: relative;
-   top: -92%;
-   left: 83%"> 
+    top: 7px;
+    left: 5px;"> <img src="../images/icons8-back-26.png" alt="" style="width: 28px;"></a>
+    <h1 id="headerText" style="position: relative;
+    top: -49px;
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0px;
+    left: 63px;
+    text-align: left;
+    white-space: break-spaces;
+    font-size: 25px;font-weight: bold;">B O O K  C A R E T A K E R</h1>
 </div>
   <!-- End of header -->
 
@@ -278,7 +542,10 @@
 
   <!-- start of the content. Dynamically load your component here with footer navigation -->
   <div role="main" class="ui-content" id="content">
-    <div  class="background-container">
+    <div  class="background-container" style="position: relative;
+    left: -11%;
+    margin-top: 34%;
+    height: 1500px;">
 
       <div id="userContent" style="display: grid;
       grid-template-columns: 1fr;width: 100%;"></div>
@@ -725,28 +992,100 @@
     </script>
 
   <!-- start of the footer section -->
-<div data-role="footer" class="footer-style">
-  <nav data-role="navbar" class="tile-container" data-theme="a">
-    <a name="N E A R   B Y   C A R E T A K E R S" href="dashboard.html" class="ui-btn ui-btn-icon-top ui-icon-search navigation tile">
-        <div class="nav_fonts">Search</div>
+  <div class="sidenav">
+    <div class="logoclass" style="box-shadow: 0px 1px grey;">
+        <img src="../images/LOGO.png" style="
+        height: auto;
+        margin-top: 15%;
+        width: 80%;
+        margin: 10%;" alt="" > 
+    </div>
+    
+    <div class="container user-div">
+      <img class="user-div-img"  src="../images/icon-map-1.jpg" alt="Avatar">
+      <!-- <div class="user-div-text"> -->
+        <p class="navbar-name-tag">Sarah Hyland</p>
+        <a href="" style="margin: 5px 0;font-size: 12pt;">Sign Out</a>
+      <!-- </div> -->
+    </div>
+    <div class="navbar-div">
+      <a name="N E A R   B Y   C A R E T A K E R S" href="dashboard.html" class="ui-link navbar-a navigation" id="firstlink">
+        <ul class="navbar-ul">
+          <li class="navbar-li navbar-li-icon">
+            <div class="ui-btn ui-btn-icon-top ui-icon-search div-icon"></div>
+          </li>
+          <li class="navbar-li">
+            <div class="nav_fonts">Search</div>
+          </li>
+        </ul>
       </a>
-      <a name="M Y  P R O F I L E" href="profile.html" class="ui-btn ui-btn-icon-top ui-icon-myprofile navigation tile">
-        <div class="nav_fonts">Profile</div>
+    </div>
+  
+    <div class="navbar-div">
+      <a name="M Y  P R O F I L E" href="profile.html" class="ui-link navbar-a navigation">
+        <ul class="navbar-ul">
+          <li class="navbar-li navbar-li-icon">
+            <div class="ui-btn ui-btn-icon-top ui-icon-myprofile div-icon"></div>
+          </li>
+          <li class="navbar-li">
+            <div class="nav_fonts">Profile</div>
+          </li>
+        </ul>
       </a>
-      <a name="P E T  S T A T U S" href="petStatus.html" class="ui-btn ui-btn-icon-top ui-icon-petstatus navigation tile">
-        <div class="nav_fonts">Pet Status</div>
+    </div>
+  
+    <div class="navbar-div">
+      <a name="P E T  S T A T U S " href="petStatus.html" class="ui-link navbar-a navigation">
+        <ul class="navbar-ul">
+          <li class="navbar-li navbar-li-icon">
+            <div class="ui-btn ui-btn-icon-top ui-icon-petstatus div-icon"></div>
+          </li>
+          <li class="navbar-li">
+            <div class="nav_fonts">Pet Status</div>
+          </li>
+        </ul>
       </a>
-      <a name="M Y  F A V O U R I T E S" href="favourites.html" class="ui-btn ui-btn-icon-top ui-icon-favourites navigation tile">
-        <div class="nav_fonts">Favourites</div>
+    </div>
+  
+    <div class="navbar-div">
+      <a name="M Y  F A V O U R I T E S " href="favourites.html" class="ui-link navbar-a navigation">
+        <ul class="navbar-ul">
+          <li class="navbar-li navbar-li-icon">
+            <div class="ui-btn ui-btn-icon-top ui-icon-favourites div-icon"></div>
+          </li>
+          <li class="navbar-li">
+            <div class="nav_fonts">Favourites</div>
+          </li>
+        </ul>
       </a>
-      <a name="B O O K I N G   H I S T O R Y" href="bookingHistory.html" class="ui-btn ui-btn-icon-top ui-icon-orderhistory navigation tile">
-        <div class="nav_fonts">Book History</div>
+    </div>
+  
+    <div class="navbar-div">
+      <a name="B O O K I N G   H I S T O R Y" href="bookingHistory.html" class="ui-link navbar-a navigation">
+        <ul class="navbar-ul">
+          <li class="navbar-li navbar-li-icon">
+            <div class="ui-btn ui-btn-icon-top ui-icon-orderhistory div-icon"></div>
+          </li>
+          <li class="navbar-li">
+            <div class="nav_fonts">Book History</div>
+          </li>
+        </ul>
       </a>
-      <a name="H E L P" href="help.html" class="ui-btn ui-btn-icon-top ui-icon-help navigation tile">
-        <div class="nav_fonts">Help</div>
+    </div>
+  
+    <div class="navbar-div">
+      <a name="H E L P" href="help.html" class="ui-link navbar-a navigation">
+        <ul class="navbar-ul">
+          <li class="navbar-li navbar-li-icon">
+            <div class="ui-btn ui-btn-icon-top ui-icon-help div-icon"></div>
+          </li>
+          <li class="navbar-li">
+            <div class="nav_fonts">Help</div>
+          </li>
+        </ul>
       </a>
-</nav>
-</div>
+    </div>
+  </div>
 <!-- End of footer -->
 
 </body>
