@@ -2,10 +2,31 @@
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+<style>
+    @media (orientation: landscape){
+    .group-styles{
+        margin-top: -54px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+    font-family: 'Roboto', sans-serif;
+    }
+    }
+    @media (orientation: portrait){
+    .group-styles{
+        margin-top: -29px;
+    margin-bottom: 17px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+    }
+    }
+</style>
 <div class="background-container">
    <div>
-    <div data-role="controlgroup" data-type="horizontal" style="margin-top: 36px;
-    width: fit-content;
+    <div data-role="controlgroup" class="group-styles" data-type="horizontal" style="width: fit-content;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Roboto', sans-serif;">
@@ -27,7 +48,7 @@
        font-size: 11px;
        text-shadow: none;
        height: 310px;
-       transform: scale(0.85);margin-left: -162px;font-family: 'Roboto', sans-serif;">
+       ;margin-left: -162px;font-family: 'Roboto', sans-serif;margin-bottom: 22px;">
            <div style="background: #006970;
            border-radius: 5px;
            width: 80px;
@@ -110,7 +131,7 @@
        font-size: 11px;
        text-shadow: none;
        height: 310px;
-       transform: scale(0.85);margin-left: -162px;font-family: 'Roboto', sans-serif;">
+       margin-left: -162px;font-family: 'Roboto', sans-serif;">
            <div style="background: #006970;
            border-radius: 5px;
            width: 80px;
