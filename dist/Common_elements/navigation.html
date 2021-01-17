@@ -20,12 +20,13 @@
 
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 25%; /* Set the width of the sidebar */
+  width: 15%; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
   background-color: rgb(88, 202, 255); /* Black */
+  border: .5px solid grey;
   /* overflow-x: hidden; Disable horizontal scroll */
   /* padding-top: 20px; */
 }
@@ -119,17 +120,37 @@
 
   .navbar-div {
     height: 11.66%;
+    border: .5px solid lightgrey;
   }
 
   .navbar-a {
     /* padding: 1px !important; */
     height: 100%;
   }
+  @media (orientation: portrait){
+    .logoclass {
+      height: 10%;
+    }
 
-  .logoclass {
-    height: 20%;
+    .user-div-img {
+      max-width: none !important;
+      margin-right: 0 !important;
+    }
+    
+    .user-div-text {
+      height: 10%;
+      width: 100%;
+      float: right;
+    }
+    .user-div {
+      height: 20%;
+    }
+
+    .navbar-name-tag {
+      margin: 1em;
+    }
+   
   }
-  
   .navbar-li {
     display: inline-block;
     padding: 4.5%;
@@ -157,19 +178,30 @@
     margin-left: -13px;
   }
 
+  .header-class {
+    width: 85%;
+    height: 5em;
+    position: sticky;
+  }
+
 /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
 /* @media screen and (max-width: 11366px) { */
 @media (orientation: landscape){
+
+  .sidenav {
+    width: 25%; 
+  }
+
+  .header-class {
+    width: 75%;
+  }
+
   .navbar-ul {
     padding-inline-start: 0px;
     background-color: white;
     height: 100%;
     margin: auto;
     box-shadow: 1px 1px 1px grey !important;    
-  }
-
-  .navbar-div {
-    height: 11.66%;
   }
 
   .navbar-a {
@@ -186,6 +218,12 @@
     padding: 4.5%;
     vertical-align: top;
     color: #58caff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    float: right;
+    height: -webkit-fill-available;
     /* box-shadow: 1px 1px 1px grey !important; */
   }
   .navbar-li-icon {
@@ -195,6 +233,7 @@
     color: #58caff;
     height: -webkit-fill-available;
     width: 35%;
+    float: left;
   }
 
   .div-icon {
@@ -213,11 +252,22 @@
     left: 50%;
     margin-left: -13px;
   }
+
+  .user-div {
+    height: 10%;
+  }
+
+  .user-div-text {
+    width: 65%;
+    float: right;
+  }
+
+  .navbar-name-tag {
+    margin: 0em;
+  }
 }
 
-
-
-    </style>
+</style>
 
 <script>
   $(document).ready(function() {    
@@ -264,8 +314,7 @@
 
 <body>
   <!-- start of the header section -->
-  <div data-role="header" data-theme="a" data-fullscreen="true" style="height: 3em;
-  width: 75%;
+  <div class="header-class" data-role="header" data-theme="a" data-fullscreen="true" style="height: 3em;
   float: right;">
       <a data-rel="back" id="back-btn" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="background-color: transparent;
       border: none;
@@ -284,7 +333,23 @@
 
   <!-- start of the content. Dynamically load your component here with footer navigation -->
   <div role="main" class="ui-responsive-panel" id="content" data-dom-cache="true">
-     
+    <div id="new-comment" style="background-color: #E2E2E2;width: 80%;float: right;border-radius: 50px;margin-right: 15px;opacity: 80%;margin-top: 6px;">
+      <p style="padding: 5px; margin: 5px;">
+      <img src="../images/prof_pic3.jpg" style="height: 25px;width: 25px;border-radius: 50%; vertical-align: middle;">
+      <!-- <span style="padding-left: 15px;"> -->
+        <input id="posted-comment" type="text" value="search" style="
+          border: none;
+          border-radius: 15px;
+          padding-left: 10px;
+          width: 195px;
+          outline: none;
+          background-color: #f1f1f1c2;
+        " onchange="readComment();">
+        <img src="../images/emoji-icon.png" style="position: absolute;right: 50px;min-width: 25px;transition: right 0.2s;">
+        <img id="post-new-comment" src="../images/comment-icon.png" style="position: absolute;right: 32px;padding-top: 4px;transition: right 0.2s;min-width: 20px;">
+        
+      </p>
+    </div>
   </div>
     <!-- End of content -->
 
@@ -322,10 +387,13 @@
       width: 80%;
       margin: 10%;" alt="" > 
   </div>
-  <div class="container" style="height: 10%;">
-      <img src="../images/icon-map-1.jpg" alt="Avatar">
-      <p style="margin: 0;">Sarah Hyland</p>
+  
+  <div class="container user-div">
+    <img class="user-div-img"  src="../images/icon-map-1.jpg" alt="Avatar">
+    <!-- <div class="user-div-text"> -->
+      <p class="navbar-name-tag">Sarah Hyland</p>
       <a href="" style="margin: 5px 0;font-size: 12pt;">Sign Out</a>
+    <!-- </div> -->
   </div>
   <div class="navbar-div">
     <a name="N E A R   B Y   C A R E T A K E R S" href="dashboard.html" class="ui-link navbar-a" id="firstlink">

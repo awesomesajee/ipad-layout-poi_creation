@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "my-pet-temp-ipad"
+    "default": "my-pet-temp-ipad",
+    "deploying": "my-pet-temp-ipad"
   }
 }

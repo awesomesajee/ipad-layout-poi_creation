@@ -35,7 +35,7 @@
         $('#content').load(page+".html");
         var navLinks = $('.navigation').toArray();
         for(i=0; i<navLinks.length; i++) {
-          if("https://pet-temp-host.web.app/Common_elements/"+page+".html" == navLinks[i].href){
+          if("https://my-pet-temp-ipad.web.app/Common_elements/"+page+".html" == navLinks[i].href){
             $('#headerText').html(navLinks[i].name);
           }
         }
@@ -118,7 +118,7 @@
 
         $('#view-fav-btn').click(function(e) {
           e.preventDefault();
-          $('#content').load('https://pet-temp-host.web.app/Common_elements/favourites.html');
+          $('#content').load('https://my-pet-temp-ipad.web.app/Common_elements/favourites.html');
           var header_text = e.target.name;
           $('#headerText').html(header_text);
 
@@ -126,17 +126,17 @@
         
         $('#services_btn').click(function(e) {
           e.preventDefault();
-          $('#user-reviews-services').load('https://pet-temp-host.web.app/Common_elements/services.html');
+          $('#user-reviews-services').load('https://my-pet-temp-ipad.web.app/Common_elements/services.html');
           
         });
 
         $('#reviews_btn').click(function(e) {
           e.preventDefault();
-          $('#user-reviews-services').load('https://pet-temp-host.web.app/Common_elements/reviews.html');
+          $('#user-reviews-services').load('https://my-pet-temp-ipad.web.app/Common_elements/reviews.html');
           
         });
         $('#bok').click(function() {
-          window.location.href = 'https://pet-temp-host.web.app/Common_elements/ordering.html';     
+          window.location.href = 'https://my-pet-temp-ipad.web.app/Common_elements/ordering.html';     
         });
       });
 
