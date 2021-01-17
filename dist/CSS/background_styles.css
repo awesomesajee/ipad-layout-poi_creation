@@ -91,9 +91,6 @@ body{
     width: 100%;
 }
 
-.background-container{
-    height: 1000px;
-}
 .poi-style{
     display: inline-block;
     width: 363px;
@@ -297,15 +294,37 @@ img {vertical-align: middle;}
 
 .myCheckbox{
   position: relative;
-    top: -80px;
+    top: -276px;
     left: 30px;
     width: 30px;
     height: 30px;
-    opacity: 0.1;
+    opacity: 0.01;
 }
 .sort-style{
   width: 322px;
   height: 100px;
   margin-right: auto;
   margin-left: auto
+}
+
+@media (orientation: landscape){
+  .background-container{
+    height: auto;
+    width: fit-content;
+    transform: scale(1.55);
+    float: right;
+    margin-right: 13.38%;
+    margin-top: 23%;
+  }
+}
+
+@media (orientation: portrait){
+  .background-container{
+    height: auto;
+    width: fit-content;
+    transform: scale(1.31);
+    float: right;
+    margin-right: 10.48%;
+    margin-top: 17%;
+  }
 }

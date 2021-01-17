@@ -10,7 +10,7 @@
       divs.id = id;
       divs.className = "sort-style";
       $('#test123').append(divs);
-      $('#' + id).load('https://my-pet-temp-ipad.web.app/Common_elements/poi.html', function() {
+      $('#' + id).load('https://my-pet-temp-ipad.web/Common_elements/poi.html', function() {
         $('.sort-style').enhanceWithin();
       });
     }
@@ -81,7 +81,7 @@
 <div  class="background-container">
   <div class="gamification_progress_bar">
     <div style="display: grid;  
-    grid-template-columns: 1fr 2fr 1fr;">
+    grid-template-columns: 1fr 2fr 1fr;font-family: 'Roboto', sans-serif">
       <div style="display: inline;float: left;margin-top: 10px;margin: auto;" class="before-text">
         <p class="gammification_progress_text">15/<small style="color: #F1C40F;font-size: 16px;">25</small></p>
         <img src="../images/icons8-dog-paw-print-100.png" alt="Happy Paw Points" style="display: inline;width: 20px;height: 20px;margin-bottom: 5px;">
@@ -112,7 +112,7 @@
   <div style="padding: 10px;
   margin-right: auto;
   margin-left: auto;margin-bottom: -15px;">
-    <input id="pac-input" class="controls" type="text" placeholder="Search Box" style="height: 40px;"/>
+    <input id="pac-input" class="controls" type="text" placeholder="Search for your location" style="height: 40px;"/>
   </div>
     
 
@@ -279,8 +279,8 @@ for (let i = 0; i < features.length; i++) {
   grid-template-columns: 1fr 3fr;
   width: 100%;margin-top: -8px;">
     <p style="margin-left: auto;font-size: 12px;
-    margin-right: auto;">Sort:</p>
-    <div data-role="controlgroup" data-type="horizontal" style="font-size: 10px;width: 100%;">
+    margin-right: auto;font-family: 'Roboto', sans-serif">Sort:</p>
+    <div data-role="controlgroup" data-type="horizontal" style="font-size: 10px;width: 100%;font-family: 'Roboto', sans-serif">
       <a href="#Page2" data-transition="flip" class="ui-btn" id="name_btn" style="width: 30%;border-right: 1px solid white;">NAME</a>
       <a href="#Page2" data-transition="flip" class="ui-btn" id="price_btn" style="width: 30%;border-right: 1px solid white;">PRICE</a>
       <a href="#Page2" data-transition="flip" class="ui-btn" id="rating_btn" style="width: 30%;">RATING</a>
@@ -350,14 +350,14 @@ for (let i = 0; i < features.length; i++) {
         function createCallback( i ){
           return function(){
             localStorage.setItem("userData", JSON.stringify(data[i]));
-            window.location.href = 'https://my-pet-temp-ipad.web.app/Common_elements/ordering.html';
+            window.location.href = 'https://my-pet-temp-ipad.web/Common_elements/ordering.html';
           }
         }
 
         function viewPagetransfer( i ){
           return function(){
             localStorage.setItem("userData", JSON.stringify(data[i]));
-            window.location.href = 'https://my-pet-temp-ipad.web.app/Common_elements/view.html';
+            window.location.href = 'https://my-pet-temp-ipad.web/Common_elements/view.html';
           }
         }
 
@@ -449,19 +449,26 @@ for (let i = 0; i < features.length; i++) {
     });
 
     });
+    var textDataMinus = localStorage.getItem("minus_point_array");
+    var data_points_minus = JSON.parse(textDataMinus);
+    var total_minus_points = 0;
+    for(var i in data_points_minus) {
+      total_minus_points += data_points_minus[i] << 0;
+    }
+
     var textData = localStorage.getItem("point_array");
     var data_points = JSON.parse(textData);
     var total_points = 0
     for(var i in data_points) {
       total_points += data_points[i] << 0;
     }
-    console.log(total_points);
+    var total_to_be_updated = total_points - total_minus_points;
     var progress_width = $('.gamification_progress_bar_full').width();
 
-    progress_width =  progress_width + (parseFloat(total_points)*18);
+    progress_width =  progress_width + (parseFloat(total_to_be_updated)*18);
     var new_width = progress_width.toString();
     $(".gamification_progress_bar_full").css("width", new_width);
-    var updated_points = parseFloat($('.background-container .gamification_progress_bar .before-text').find('p.gammification_progress_text').text().substring(0, 2)) + parseFloat(total_points);
+    var updated_points = parseFloat($('.background-container .gamification_progress_bar .before-text').find('p.gammification_progress_text').text().substring(0, 2)) + parseFloat(total_to_be_updated);
     $('.background-container .gamification_progress_bar .before-text').find('p.gammification_progress_text').html(updated_points.toString()+"/25");
     $('.background-container .gamification_progress_bar .remain-div .reamin-div-before').find('p.remain_points_text').html("collect "+(25-updated_points).toString());
   </script>

@@ -20,24 +20,18 @@
 
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 25%; /* Set the width of the sidebar */
+  width: 15%; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
   background-color: rgb(88, 202, 255); /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
+  border: .5px solid grey;
+  /* overflow-x: hidden; Disable horizontal scroll */
+  /* padding-top: 20px; */
 }
 
 /* The navigation menu links */
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-}
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
@@ -51,37 +45,39 @@
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
+/* @media screen and (max-height: 1366) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-}
+} */
 
 .nav_fonts {
     font-size: 12pt;
     /* font-family: Georgia, Times, 'Times New Roman', serif; */
 }
 
-.navbar-ul {
+/* .navbar-ul {
   padding-inline-start: 0px;
   background-color: white;
   height: 52px;
   margin: auto;
   box-shadow: 1px 1px 1px grey !important;
-}
+} */
 
-
+/* 
 .navbar-li {
   display: inline-block;
   padding: 15px;
   vertical-align: top;
   color: #58caff;
-}
+} */
 
 .navbar-li-icon {
   display: inline-block;
   padding: 0 !important;
   vertical-align: top;
   color: #58caff;
+  height: -webkit-fill-available;
+  width:  -webkit-fill-available;
 }
 
 .div-icon {
@@ -91,7 +87,7 @@
 }
 
 .navbar-a {
-  padding: 1px !important;
+  /* padding: 1px !important; */
 }
 
 .container {
@@ -111,7 +107,167 @@
   margin-right: 20px;
   border-radius: 50%;
 }
-    </style>
+
+
+/* --------------------------------------------------------------------------------------- */
+.navbar-ul {
+    padding-inline-start: 0px;
+    background-color: white;
+    height: 100%;
+    margin: auto;
+    /* box-shadow: 1px 1px 1px grey !important;     */
+  }
+
+  .navbar-div {
+    height: 11.66%;
+    border: .5px solid lightgrey;
+  }
+
+  .navbar-a {
+    /* padding: 1px !important; */
+    height: 100%;
+  }
+  @media (orientation: portrait){
+    .logoclass {
+      height: 10%;
+    }
+
+    .user-div-img {
+      max-width: none !important;
+      margin-right: 0 !important;
+    }
+    
+    .user-div-text {
+      height: 10%;
+      width: 100%;
+      float: right;
+    }
+    .user-div {
+      height: 20%;
+    }
+
+    .navbar-name-tag {
+      margin: 1em;
+    }
+   
+  }
+  .navbar-li {
+    display: inline-block;
+    padding: 4.5%;
+    vertical-align: top;
+    color: #58caff;
+    /* box-shadow: 1px 1px 1px grey !important; */
+  }
+
+  .div-icon {
+    padding: 35px;
+    height: -webkit-fill-available;
+  }
+
+  .ui-btn-icon-top:after {
+    /* top: 1.5625em;
+    height: 35px;
+    width: 35px; */
+    top: 3.5625em;
+    height: 40px;
+    width: 40px;
+  }
+
+  .ui-btn-icon-notext:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after {
+    left: 50%;
+    margin-left: -13px;
+  }
+
+  .header-class {
+    width: 85%;
+    height: 4em;
+    position: fixed;
+  }
+
+/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+/* @media screen and (max-width: 11366px) { */
+@media (orientation: landscape){
+
+  .sidenav {
+    width: 25%; 
+  }
+
+  .header-class {
+    width: 75%;
+  }
+
+  .navbar-ul {
+    padding-inline-start: 0px;
+    background-color: white;
+    height: 100%;
+    margin: auto;
+    box-shadow: 1px 1px 1px grey !important;    
+  }
+
+  .navbar-a {
+    /* padding: 1px !important; */
+    height: 100%;
+  }
+
+  .logoclass {
+    height: 20%;
+  }
+  
+  .navbar-li {
+    display: inline-block;
+    padding: 4.5%;
+    vertical-align: top;
+    color: #58caff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    float: right;
+    height: -webkit-fill-available;
+    /* box-shadow: 1px 1px 1px grey !important; */
+  }
+  .navbar-li-icon {
+    display: inline-block;
+    /* padding: 0 !important; */
+    vertical-align: top;
+    color: #58caff;
+    height: -webkit-fill-available;
+    width: 35%;
+    float: left;
+  }
+
+  .div-icon {
+    padding: 35px;
+    height: -webkit-fill-available;
+    box-shadow: 0px -1px 2px grey;
+  }
+
+  .ui-btn-icon-top:after {
+    top: 2.5625em;
+    height: 35px;
+    width: 35px;
+  }
+
+  .ui-btn-icon-notext:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after {
+    left: 50%;
+    margin-left: -13px;
+  }
+
+  .user-div {
+    height: 10%;
+  }
+
+  .user-div-text {
+    width: 65%;
+    float: right;
+  }
+
+  .navbar-name-tag {
+    margin: 0em;
+  }
+}
+
+</style>
 
 <script>
   $(document).ready(function() {    
@@ -158,9 +314,7 @@
 
 <body>
   <!-- start of the header section -->
-  <div data-role="header" data-theme="a" data-fullscreen="true" style="height: 3em;
-  width: 75%;
-  float: right;">
+  <div class="header-class" data-role="header" data-theme="a" data-fullscreen="true" style="float: right;">
       <a data-rel="back" id="back-btn" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="background-color: transparent;
       border: none;
       position: relative;
@@ -170,54 +324,35 @@
       <h1 id="headerText" style="position: relative;
       top: -51px;font-family: 'Rajdhani', sans-serif;margin: 0px;left: 40px;
     text-align: left;white-space: break-spaces;">T I T L E</h1>
-     <img src="../images/small-logo.png" alt="" style="position: relative;
+     <!-- <img src="../images/small-logo.png" alt="" style="position: relative;
      top: -86px;
-     left: 307px;"> 
+     left: 307px;">  -->
   </div>
   <!-- End of header -->
 
   <!-- start of the content. Dynamically load your component here with footer navigation -->
   <div role="main" class="ui-responsive-panel" id="content" data-dom-cache="true">
      
-  </div>
-    <!-- End of content -->
-
-  <!-- start of the footer section -->
-<!-- <div data-role="footer" class="footer-style">
-  <nav data-role="navbar" class="tile-container" data-theme="a">
-    <a name="N E A R   B Y   C A R E T A K E R S" href="dashboard.html" class="ui-btn ui-btn-icon-top ui-icon-search navigation tile " id="firstlink">
-        <div class="nav_fonts">Search</div>
-      </a>
-      <a name="M Y  P R O F I L E" href="profile.html"  class="ui-btn ui-btn-icon-top ui-icon-myprofile navigation tile">
-        <div class="nav_fonts">Profile</div>
-      </a>
-      <a name="P E T  S T A T U S " href="petStatus.html" class="ui-btn ui-btn-icon-top ui-icon-petstatus navigation tile">
-        <div class="nav_fonts">Pet Status</div>
-      </a>
-      <a name="M Y  F A V O U R I T E S " href="favourites.html" class="ui-btn ui-btn-icon-top ui-icon-favourites navigation tile">
-        <div class="nav_fonts">Favourites</div>
-      </a>
-      <a name="B O O K I N G   H I S T O R Y" href="bookingHistory.html" class="ui-btn ui-btn-icon-top ui-icon-orderhistory navigation tile">
-        <div class="nav_fonts">Book History</div>
-      </a>
-      <a name="H E L P" href="help.html" class="ui-btn ui-btn-icon-top ui-icon-help navigation tile">
-        <div class="nav_fonts">Help</div>
-      </a>
-</nav>
-</div> -->
-<!-- End of footer -->
+  </div>  
 
 
 <div class="sidenav">
-  <div style="box-shadow: 0px 1px grey;">
-      <img src="../images/LOGO.png" style="height: 10em; width: 13em; margin: 1em 2em 1em 2em;" alt="" > 
+  <div class="logoclass" style="box-shadow: 0px 1px grey;">
+      <img src="../images/LOGO.png" style="
+      height: auto;
+      margin-top: 15%;
+      width: 80%;
+      margin: 10%;" alt="" > 
   </div>
-  <div class="container" style="height: 10%;">
-      <img src="../images/icon-map-1.jpg" alt="Avatar">
-      <p style="margin: 0;">Sarah Hyland</p>
-      <a href="" style="margin: 5px 0;font-size: 12pt;" ></a>
+  
+  <div class="container user-div">
+    <img class="user-div-img"  src="../images/icon-map-1.jpg" alt="Avatar">
+    <!-- <div class="user-div-text"> -->
+      <p class="navbar-name-tag">Sarah Hyland</p>
+      <a href="" style="margin: 5px 0;font-size: 12pt;">Sign Out</a>
+    <!-- </div> -->
   </div>
-  <div>
+  <div class="navbar-div">
     <a name="N E A R   B Y   C A R E T A K E R S" href="dashboard.html" class="ui-link navbar-a navigation" id="firstlink">
       <ul class="navbar-ul">
         <li class="navbar-li navbar-li-icon">
@@ -230,7 +365,7 @@
     </a>
   </div>
 
-  <div>
+  <div class="navbar-div">
     <a name="M Y  P R O F I L E" href="profile.html" class="ui-link navbar-a navigation">
       <ul class="navbar-ul">
         <li class="navbar-li navbar-li-icon">
@@ -243,7 +378,7 @@
     </a>
   </div>
 
-  <div>
+  <div class="navbar-div">
     <a name="P E T  S T A T U S " href="petStatus.html" class="ui-link navbar-a navigation">
       <ul class="navbar-ul">
         <li class="navbar-li navbar-li-icon">
@@ -256,7 +391,7 @@
     </a>
   </div>
 
-  <div>
+  <div class="navbar-div">
     <a name="M Y  F A V O U R I T E S " href="favourites.html" class="ui-link navbar-a navigation">
       <ul class="navbar-ul">
         <li class="navbar-li navbar-li-icon">
@@ -269,7 +404,7 @@
     </a>
   </div>
 
-  <div>
+  <div class="navbar-div">
     <a name="B O O K I N G   H I S T O R Y" href="bookingHistory.html" class="ui-link navbar-a navigation">
       <ul class="navbar-ul">
         <li class="navbar-li navbar-li-icon">
@@ -282,7 +417,7 @@
     </a>
   </div>
 
-  <div>
+  <div class="navbar-div">
     <a name="H E L P" href="help.html" class="ui-link navbar-a navigation">
       <ul class="navbar-ul">
         <li class="navbar-li navbar-li-icon">

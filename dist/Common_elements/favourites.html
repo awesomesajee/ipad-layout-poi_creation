@@ -1,6 +1,8 @@
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <meta name="viewport" content="width=device-width">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
 
 <style>
   .search-design{
@@ -19,6 +21,29 @@
     margin-top: 14px;
     border-radius: 4px;
   }
+ 
+  input[type=checkbox]+ label{
+    position: relative;
+    top: -100px;
+    left: 1px; 
+    height: 70px;
+    width: 70px;
+    margin-left: 10px;
+    margin-top: -191px;
+    
+  }
+  input[type=checkbox]:checked + label{
+    background:url("../images/right-icon.png") no-repeat;
+    position: relative;
+    opacity: 0.8;
+    border-radius: 60%;
+    background-size: 100%;
+    width: 75px!important;
+    height: 75px!important;
+    left: -1px!important;
+    top: -343px !important;
+    transform: scale(0.86) !important;
+  }
 </style>
 <script>
     var textData = localStorage.getItem("favList");
@@ -30,7 +55,7 @@
       divs.id = id;
       divs.className = "sort-style";
       $('#userContent').append(divs);
-      $('#' + id).load('https://my-pet-temp-ipad.web.app/Common_elements/poi.html', function() {
+      $('#' + id).load('https://my-pet-temp-ipad.web/Common_elements/poi.html', function() {
         $('.sort-style').enhanceWithin();
       });
     }
@@ -44,18 +69,18 @@
       <input id="fav-input" class="controls" type="text" placeholder="Search your favourite" style="height: 40px;"/>
   </div>
   <hr>
-  <p style="font-family: Roboto; font-style: normal; font-weight: normal; font-size: 14px; line-height: 14px; display: flex; align-items: center; color: #000000; margin-left: 12px; margin-bottom: 4px;">Select your favourite caretakers and click on the email button to email.</p>
+  <p style="font-family: Roboto; font-style: normal; font-weight: normal; font-size: 14px; line-height: 14px; display: flex; align-items: center; color: #000000; margin-left: 12px; margin-bottom: 4px;font-family: 'Roboto', sans-serif;">Select your favourite caretakers and click on the email button to email.</p>
   <div style="text-align: center;
   font-size: 12px;">
       <button id="delete-fav-btn" style="display: inline;
       height: 45px;
       width: 150px;
-      background-color: #FF2548;" disabled="disabled">DELETE</button>
+      background-color: #FF2548;font-family: 'Roboto', sans-serif;" disabled="disabled">DELETE</button>
       <button id="email-btn" style="width: 200px;
       display: inline;
       height: 45px;
       position: relative;
-      top: 1px;" disabled="disabled"><img src="../images/email fav.png" alt="" style="margin-right: 5px;
+      top: 1px;font-family: 'Roboto', sans-serif;" disabled="disabled"><img src="../images/email fav.png" alt="" style="margin-right: 5px;
     margin-top: 3px;" >EMAIL SELECTED</button>
   </div>
 
@@ -75,6 +100,9 @@
                 $('#'+id+' .poi-style .poi-animal').find('img.animal').attr("src", data[i].animalImagePath);
                 $('#'+id+' .poi-style .price_array .happy-pow').find('p.gammification_progress_text').html(data[i]._userpoints);
                 $('#'+id).append('<input type="checkbox" name="myCheckbox" class="myCheckbox"/>');
+                $('#'+id+' .myCheckbox').attr('id','checkbox_'+i);
+                $('#'+id).append('<label style="position: relative;top: -100px;left: 1px; width: 30px; height: 30px;height: 70px;width: 70px;margin-top: 15px;margin-left: 10px;"></label>');
+                $('#'+id+' label').attr('for','checkbox_'+i);
                 
                 }
 
@@ -126,7 +154,7 @@
             
             window.open('mailto:'+inputemail+'?subject='+subject+'&body='+body);
           } 
-        
+          $('#email-success').popup("close");
         });
         //validting email address
         function IsEmail(email) {
@@ -158,7 +186,7 @@
                         
             });
             
-            $('#content').load('https://my-pet-temp-ipad.web.app/Common_elements/favourites.html');
+            $('#content').load('https://my-pet-temp-ipad.web/Common_elements/favourites.html');
             //var header_text = e.target.name;
             //$('#headerText').html(header_text);
 
