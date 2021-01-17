@@ -1,20 +1,20 @@
 .ui-icon-search:after {
     background-image: url("../images/icons8-search-100.png");
-    background-size: 20px 20px;
+    background-size: 40px 40px;
     border-radius: 0;
     background-color: transparent;
 }
 
 .ui-icon-myprofile:after {
     background-image: url("../images/icons8-user-60.png");
-    background-size: 20px 20px;
+    background-size: 40px 40px;
     border-radius: 0;
     background-color: transparent;
 }
 
 .ui-icon-petstatus:after {
     background-image: url("../images/icons8-pet-commands-summon-100\ \(1\).png");
-    background-size: 20px 20px;
+    background-size: 40px 40px;
     border-radius: 0;
     background-color: transparent;
     -webkit-border-radius: 0em;
@@ -23,42 +23,42 @@
 
 .ui-icon-favourites:after {
     background-image: url("../images/icons8-heart-100\ \(3\).png");
-    background-size: 20px 20px;
+    background-size: 40px 40px;
     border-radius: 0;
     background-color: transparent;
 }
 
 .ui-icon-orderhistory:after {
     background-image: url("../images/icons8-order-history-100\ \(1\).png");
-    background-size: 20px 20px;
+    background-size: 40px 40px;
     border-radius: 0;
     background-color: transparent;
 }
 
 .ui-icon-help:after {
     background-image: url("../images/icons8-help-100\ \(1\).png");
-    background-size: 20px 20px;
+    background-size: 40px 40px;
     border-radius: 0;
     background-color: transparent;
 }
 
 .ui-icon-schedule:after {
     background-image: url("../images/icons8-schedule-100.png");
-    background-size: 20px 20px;
+    background-size: 40px 40px;
     border-radius: 0;
     background-color: transparent;
 }
 
 .ui-icon-leaderboard:after {
     background-image: url("../images/icons8-leaderboard-100.png");
-    background-size: 20px 20px;
+    background-size: 40px 40px;
     border-radius: 0;
     background-color: transparent;
 }
 
 .ui-icon-trophy:after {
     background-image: url("../images/icons8-trophy-60.png");
-    background-size: 20px 20px;
+    background-size: 40px 40px;
     border-radius: 0;
     background-color: transparent;
 }

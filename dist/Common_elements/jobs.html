@@ -14,7 +14,7 @@
             divs.id = id;
             divs.className = "sort-style";
             $('#poi-cont').append(divs);
-            $('#' + id).load('https://my-pet-temp-ipad.web/Common_elements/poi-caretaker.html', function () {
+            $('#' + id).load('https://my-pet-temp-ipad.web.app/Common_elements/poi-caretaker.html', function () {
                 $('.sort-style').enhanceWithin();
             });
 
@@ -25,7 +25,7 @@
             });
 
     $('#navPetStatus').click(function() {    
-          window.location.href = 'https://my-pet-temp-ipad.web/Common_elements/navigation_caretaker.html#petStatus';
+          window.location.href = 'https://my-pet-temp-ipad.web.app/Common_elements/navigation_caretaker.html#petStatus';
     });
  
     });
@@ -142,7 +142,7 @@
                 }
 
             }
-            setTimeout(setAttributes, 1000);
+            setTimeout(setAttributes, 500);
 
         });
 

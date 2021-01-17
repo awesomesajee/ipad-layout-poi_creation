@@ -14,7 +14,206 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
 
+      .ui-mobile .ui-page {
+        min-height: -webkit-fill-available;
+        background-color: #5bd4f6;
+        max-width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+      }
+      .div-circle-big {
+        z-index: 1;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 150px;
+        background-color: orange;
+        border: 1px solid orange;
+        border-radius: 500px;
+        height: 150px;
+        margin-left: 40px;
+        position: relative;
+        top: -20px;
+      }
+
+      .p-circle {
+        width: 140px; 
+        margin-left: 4px;
+        margin-top: 40px;
+        color: white;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 25px;
+        text-align: center;
+      }
+
+      .div-circle-small {
+        width: 50px;
+        height: 50px;
+        background-color: orange;
+        border: 1px solid orange;
+        border-radius: 100px;
+        position: relative;
+        left: 145px;
+        top: -70px;
+      }
+
+      .button-welcome {
+        background-color: #FF8139;width: 200px;height: 50px;position: relative;top: -80px;left: 38%;
+      }
+
+      .logo-welcome {
+        width: 160px;height: 160px;background-color: #BFF1FF;border: 1px solid #BFF1FF;border-radius: 100px;margin-left: 73%;margin-top: -90px;
+      }
+
+      @media (orientation: landscape){
+      .background-container{
+        height: auto;
+        width: fit-content;
+        transform: scale(1.55);
+        float: right;
+        margin-right: 13.38%;
+        margin-top: 23%;
+      }
+
+      .div-circle-big {
+        z-index: 1;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 33%;
+        background-color: orange;
+        border: 1px solid orange;
+        border-radius: 500px;
+        height: 50%;
+        margin-left: 40px;
+        position: relative;
+        top: -20px;
+        overflow: hidden;
+      }
+
+      .div-circle-small{
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        border: 1px solid orange;
+        border-radius: 100px;
+        position: relative;
+        left: 292px;
+        top: -137px;
+      }
+      
+      .img-canoodle {
+        width: 75%;
+        margin-top: -485px;
+        background-color: #5BD4F6;
+        float: right;
+        background: transparent;
+      }
+
+      .div-circle-big {
+        z-index: 1;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 25%;
+        background-color: orange;
+        border: 1px solid orange;
+        border-radius: 500px;
+        height: 50%;
+        margin-left: 40px;
+        position: relative;
+        top: -20px;
+        overflow: hidden;
+      }
+
+      .div-circle-small {
+        width: 7.5%;
+        height: 15%;
+        background-color: orange;
+        border: 1px solid orange;
+        border-radius: 100px;
+        position: relative;
+        left: 21%;
+        top: -20%;
+      }
+
+      .p-circle {
+        width: 70%;
+        height: auto;
+        margin-left: 47px;
+        margin-top: 32%;
+        color: white;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 24pt;
+        font-family: Coming Soon;
+        text-shadow: 1px 2px 2px grey;
+      }
+
+      .button-welcome {
+        background-color: #FF8139 !important;
+        width: 25% !important;
+        height: 12% !important;
+        /* position: sticky; */
+        top: 22em !important;
+        left: 55em !important;
+        /* bottom: 1px; */
+        float: right !important;
+        font-size: larger !important;
+        color: white !important;
+      }
+
+      .logo-welcome {
+        width: 160px;
+        height: 160px;
+        background-color: #BFF1FF;
+        border: 1px solid #BFF1FF;
+        border-radius: 100px;
+        margin-left: 93%;
+        margin-top: -90px;
+      }
+    }
+    
+    @media (orientation: portrait){
+      .background-container{
+        height: auto;
+        width: fit-content;
+        transform: scale(1.31);
+        float: right;
+        margin-right: 10.48%;
+        margin-top: 17%;
+      }
+
+      .img-canoodle {
+        width: 100%;
+        margin-top: -228px;
+        /* background-color: #5BD4F6; */
+        background: transparent;
+      }
+
+      .logo-welcome {
+        width: 160px;
+        height: 160px;
+        background-color: #BFF1FF;
+        border: 1px solid #BFF1FF;
+        border-radius: 100px;
+        margin-left: 90%;
+        margin-top: -90px;
+      }
+
+      .button-welcome {
+        background-color: #FF8139 !important;
+        width: 36% !important;
+        height: 6% !important;
+        position: absolute;
+        top: 51em !important;
+        left: 25em !important;
+        /* bottom: 1px; */
+        float: right !important;
+        font-size: 18pt !important;
+        color: white !important;
+      }
+    }
+    </style>
    
 </head>
 <!-- End of head -->
@@ -27,22 +226,22 @@
 
 <body>
   <div style="width: 100%;background-color: #5BD4F6;height: 667px;">
-    <div style="width: 160px;height: 160px;background-color: #BFF1FF;border: 1px solid #BFF1FF;border-radius: 100px;margin-left: 73%;margin-top: -90px;">
+    <div class="logo-welcome">
       <div style="width: 150px;height: 150px;background-color: #3AC0E5;border: 1px solid #3AC0E5;border-radius: 100px;">
         <img src="images/logo image.png" alt="" style="width: 26px;margin-top: 95px;margin-left: 46px;">
         <p style="color: white;font-size: 9px;margin-left: 30px;margin-top: -1px;">CANOODLE</p>
       </div>      
     </div>
-    <div style="z-index: 1;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);width: 150px;background-color: orange;border: 1px solid orange;border-radius: 500px;height: 150px;margin-left: 40px;position: relative;top: -20px;">
-      <p style="width: 140px; margin-left: 4px;margin-top: 40px;color: white;font-weight: bold;font-size: 12px;line-height: 25px;text-align: center;">Keep your dog in safe hands with endless love</p>
+    <div class="div-circle-big">
+      <p class="p-circle">Keep your dog in safe hands with endless love</p>
     </div>
-    <div style="width: 50px;height: 50px;background-color: orange;border: 1px solid orange;border-radius: 100px;position: relative;left: 145px;top: -70px;"></div>
+    <div class="div-circle-small"></div>
     <div>
-      <img src="images/welcome-image.png" alt="" style="width: 100%;margin-top: -90px;background-color: #5BD4F6;">
+      <img src="images/welcome-image.png" alt="" class="img-canoodle">
     </div>
     
 
-    <button id="welcome-btn" style="background-color: #FF8139;width: 200px;height: 50px;position: relative;top: -80px;left: 38%;">GET STARTED <img src="images/icons8-double-right-48.png" alt="" style="width: 30px;margin-left: 15px;"></button>
+    <button id="welcome-btn" class="button-welcome">GET STARTED <img src="images/icons8-double-right-48.png" alt="" style="width: 30px;margin-left: 15px;"></button>
 
   </div>
 
